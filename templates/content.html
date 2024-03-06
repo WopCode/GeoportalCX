@@ -1,0 +1,66 @@
+{% extends './index.html' %}
+
+{% block body %}
+
+<div class="container">
+    <br>
+    <div class="rom">
+        <div class="col align-self-center">
+            <figure class="text-center">
+                <blockquote class="blockquote">
+                    <br>
+                    <h1>Mapa de Bolivia</h1>
+                    <br>
+                    <p>
+                        El proyecto consiste en el desarrollando de una aplicación web que permita la consulta de información temática relativa a las diferentes zonas geopgraficas que se tenga dentro de Bolivia todo el mapa obtenida de un API leafLet para su representación geográfica en visor de mapas.
+                    </p>
+                </blockquote>
+            </figure>
+            <br>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <select class="form-select" aria-label="Default select example" name="select-location" id="select-location">
+                            <option selected>Seleccione un lugar</option>
+                            <option value="-14.442222, -67.528333">Beni: Rurrenabaque</option>
+                            <option value="-14.85195, -66.74954">Beni: San Borja</option>
+                            <option value="-15.2166, -69.0442">La Paz: Charazani</option>
+                            <option value="-15.77305, -68.64973">La Paz: Sorata</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div id="mapid"></div>
+        </div>
+    </div>
+</div>
+<main>
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-light">Album de Imagenes</h1>
+            </div>
+        </div>
+    </section>
+
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                {% for cls in image %}
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="./static/image/{{cls[3]}}"class="rounded" alt="..." height="250px">
+                            <div class="card-body">
+                                <p class="card-text">{{cls[4]}}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+</main>
+{% endblock %}
