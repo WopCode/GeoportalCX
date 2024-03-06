@@ -5,7 +5,7 @@
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-Geoportal basico basado en el estado prurinacional de bolivia
+Geoportal basico basado.
 
 ## Instalacion
 
